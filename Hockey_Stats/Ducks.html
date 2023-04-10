@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9bafa04208.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>StickeyStickStats</title>
+
+</head>
+<body>
+
+    <div id="main" class="container">
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="Home.html">Home Page</a>
+            <a href="standings.html">Standings</a>
+            <a href="NHL_teams.html">NHL Teams</a>
+            <a href="About.html">About</a>        
+        </div>
+
+        <div class="search-box">
+            <span style="font-size:22px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            <input type="text" placeholder="Look for Player">
+            <button class="fa-solid fa-magnifying-glass"></button>
+        </div>
+
+        <div class="team-logo">
+            <img src="/Team Logos/1.png">
+            <a id="name"></a>
+            <a id="stadium"></a>
+        </div>
+
+        <div>
+            <div class="action-button">
+                <button class="fa-solid fa-hockey-puck"> Current Season Stats</button>
+            </div>
+            <div class="action-button">
+                <button class="fa-solid fa-calendar-days"> Schedule</button>
+            </div>
+            <div class="action-button">
+                <button class="fa-solid fa-person"> Players</button>
+            </div>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0px";
+                document.getElementById("main").style.marginLeft = "0px";
+            }
+        </script>
+
+    <script src="https://kit_fontawesome.com/7c8801c017.js"
+    crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+</body>   
+</html>

@@ -1,0 +1,17 @@
+#All URLS in this file are used to get or retreive items for the application
+
+# Where to get different icons for app
+https://fontawesome.com/
+
+# All the individual URLS for the api
+
+#Standing for the entire league
+https://statsapi.web.nhl.com/api/v1/standings/byLeague
+#standings by conference
+https://statsapi.web.nhl.com/api/v1/standings/byConference
+#standings for wildcard spot
+https://statsapi.web.nhl.com/api/v1/standings/wildcard
+#standings for division leaders
+https://statsapi.web.nhl.com/api/v1/standings/divisionLeaders
+
+

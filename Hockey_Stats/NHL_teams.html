@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9bafa04208.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>StickeyStickStats</title>
+
+</head>
+<body>
+
+    <div id="main" class="container">
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="Home.html">Home Page</a>
+            <a href="Standings.html">Standings</a>
+            <a href="About.html">About</a>        
+        </div>
+
+        <div class="search-box">
+            <span style="font-size:22px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            <input type="text" placeholder="Player or Team">
+            <button class="fa-solid fa-magnifying-glass"></button>
+        </div>
+
+        <div id="pages">
+            <div class="team-button">
+                <button type="click" id="1" value="24"><img src="\Team Logos\1.png">Anaheim Ducks</button>
+            </div>
+            <div class="team-button">
+                <button type="click" id="2" value="53"><img src="\Team Logos\2.png">Arizona Coyotes</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\3.png">Boston Bruins</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\4.png">Buffalo Sabers</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\5.png">Calgary Flames</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\6.png">Carolina Hurricanes</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\7.png">Chicago Black Hawks</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\8.png">Colorado Avalanche</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\9.png">Columbus Blue Jackets</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\10.png">Dallas Stars</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\11.png">Detroit Red Wings</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\12.png">Edmonton Oilers</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\13.png">Florida Panthers</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\14.png">Los Angles Kings</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\15.png">Minnesota Wild</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\16.png">Montreal Canadiens</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\17.png">Nashville Predators</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\18.png">New Jersey Devils</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\19.png">New York Inslanders</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\20.png">New York Rangers</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\21.png">Ottawa Senators</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\22.png">Philadelphia Flyers</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\23.png">Pittsburgh Penguins</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\24.png">San Jose Sharks</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\25.png">Seattle Kraken</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\26.png">St. Louis Blue Jackets</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\27.png">Tampa Bay Lightning</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\28.png">Toronto Maple Leafs</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\29.png">Vancouver Canucks</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\30.png">Vegas Golden Knights</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\31.png">Washington Capitals</button>
+            </div>
+            <div class="team-button">
+                <button><img src="\Team Logos\32.png">Winnipeg Jets</button>
+            </div>
+
+            <script>
+
+                //This retreives data from button clicked and saves the values
+                let teamButton = document.getElementById('pages');
+                let id = '';
+
+                teamButton.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    id = document.getElementById('1').value;
+                    
+                    sessionStorage.setItem('teamId', id);
+
+                    window.location.href = 'Ducks.html'
+                });
+            </script>
+
+        </div>
+
+        <script>
+
+            //side navigation bar code needs to be implemented in the frame of the app
+            //also probably needs its own JS file so it can be called from all pages and not be redundant throught out all html files
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0px";
+                document.getElementById("main").style.marginLeft = "0px";
+            }
+        </script>
+
+        <div class="not-found">
+            <img src="">
+            <p>Oops! That player has been Ejected!</p>  
+        </div>
+
+        <div class="player-box">
+            <img src="">
+            <p class="player-name"></p>
+            <p class="player-age"></p>
+            <p class="player-nationality"></p>
+        </div>
+
+        <div class="player-details">
+
+            <div class="player-team">
+                <i class="fa-solid fa-flag-pennant"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Team</p>
+                </div>
+            </div>
+
+            <div class="player-position">
+                <i class="fa-solid fa-ice-skate\
+                "></i>
+                <div class="text">
+                    <span></span>
+                    <p>Position</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit_fontawesome.com/7c8801c017.js"
+    crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
+</body>   
+</html>

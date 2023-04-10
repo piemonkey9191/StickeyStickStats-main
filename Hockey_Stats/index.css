@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #06283d;
+}
+
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #dff6ff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #06283d;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover{
+    color: #06283d;
+}
+
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    max-height: 605px;
+    background: #fff;
+    padding: 20px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-out;
+    overflow-y: auto;
+}
+
+.search-box{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-box input{
+    color: #06283d;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 32px;
+}
+
+.search-box input::placeholder{
+    font-size: 20px;
+    font-weight: 500;
+    color: #06283d;
+    text-transform: capitalize;
+}
+
+.search-box button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283d;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+.search-box button:hover{
+    color: #fff;
+    background: #06283d;
+}
+
+.search-box i{
+    position: absolute;
+    color: #06283d;
+    font-size: 20px;
+}
+
+.team-button img{
+    width: 50px;
+    height: 50px;
+}
+
+.team-button button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 300px;
+    height: 120px;
+    color: #06283d;
+    border-radius: 6%;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+.team-button button:hover{
+    color: #fff;
+    background: #06283d;
+}
+
+.action-button button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    cursor: pointer;
+    width: auto;
+    height: 50px;
+    color: #06283d;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: 0.4s ease;
+}
+
+.action-button button:hover{
+    color: #fff;
+    background: #06283d;
+}
+
+.player-box{
+    text-align: center;
+}
+
+.player-box img{
+    width: 60%;
+    margin-top: 30px;
+}
+
+.player-box .player-name{
+    position: relative;
+    color: #06283d;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: -16px;
+}
+
+.player-box .player-name span{
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+.player-box .player-age{
+    color: #06283d;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.player-box .player-nationality{
+    color: #06283d;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.player-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.player-details .player-team, .player-details .player-position{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+.player-details .player-team{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+.player-details .player-position{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+.player-details i{
+    color: #06283d;
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+.player-details span{
+    color: #06283d;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+.player-details p{
+    color: #06283d;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.team-logo img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 200px;
+    height: 200px;
+}
+
+.team-logo a{
+    display: block;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.not-found{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0;
+    opacity: o;
+    display: none;
+}
+
+.not-found img{
+    width: 70%;
+}
+
+.not-found p{
+    color: #06283d;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.player-box, .player-details{
+    scale: 0;
+    opacity: 0;
+}
+
+.fade-in{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@keyframes fadeIn{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
