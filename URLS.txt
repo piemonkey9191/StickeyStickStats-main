@@ -13,5 +13,7 @@ https://statsapi.web.nhl.com/api/v1/standings/byConference
 https://statsapi.web.nhl.com/api/v1/standings/wildcard
 #standings for division leaders
 https://statsapi.web.nhl.com/api/v1/standings/divisionLeaders
-
-
+#gets players on team roster
+https://statsapi.web.nhl.com/api/v1/teams/24/?expand=team.roster
+#Player head shots
+http://nhl.bamcontent.com/images/headshots/current/168x168/{player_id}.jpg
